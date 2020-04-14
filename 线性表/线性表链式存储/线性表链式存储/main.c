@@ -136,15 +136,19 @@ Status ListDelete(LinkList *L,int i,ElemType *e){
 /* 初始条件：链式线性表L已存在。操作结果：将L重置为空表 */
 Status ClearList(LinkList *L) {
     LinkList p, q;
+    // p指向第一个节点
     p = (*L)->next;
+    // 若为空表
     if(p == NULL) return OK;
-    
-    while (p->next) {
+    // 没到表尾
+    while (p) {
         q = p->next;
         free(p);
         p = q;
     }
     
+    // 头结点指针域为空
+    (*L)->next = NULL;
     
     return OK;
 }
@@ -164,13 +168,57 @@ Status PrintfList(LinkList L) {
     return OK;
 }
 
+//2.6 单链表头插法
+/* 随机产生n个元素值,建立带表头结点的单链线性表L(头插法)*/
+void CreateListHead(LinkList *L, int n) {
+    // 创建头结点
+    *L = (LinkList)malloc(sizeof(Node));
+    // 头结点后继为NULL
+    (*L)->next = NULL;
+    
+    LinkList p;
+    for (int i=1; i<=n; i++) {
+        //生成新结点
+        p = (LinkList)malloc(sizeof(Node));
+        //i赋值给新结点的data
+        p->data = i;
+        //p->next = 头结点的L->next
+        p->next = (*L)->next;
+        //头结点后继指向该节点p
+        (*L)->next = p;
+    }
+}
+//2.7 单链表尾插法
+/* 随机产生n个元素值,建立带表头结点的单链线性表L(后插法)*/
+void CreateListTail(LinkList *L, int n)  {
+    // 创建头结点
+    *L = (LinkList)malloc(sizeof(Node));
+    // 头结点后继首元节点指向NULL
+    (*L)->next = NULL;
+    
+    LinkList p, q;
+    // 辅助节点 q = 头结点
+    q = (*L);
+    for (int i = 1; i<=n; i++) {
+        // 生成新节点
+        p = (LinkList)malloc(sizeof(Node));
+        // 新节点赋值
+        p->data = i;
+        // 新节点后继指向NULL
+        p->next = NULL;
+        // 辅助节点q 后继指向新节点p
+        q->next = p;
+        // 辅助节点后移，即q=p
+        q = p;
+    }
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     printf("Hello, 线性表链式存储\n");
 
     Status iStatus;
-    LinkList L1,L;
-    struct Node *L2;
+    LinkList L;
     ElemType e;
     
     //2.1 单链表初始化
@@ -189,10 +237,28 @@ int main(int argc, const char * argv[]) {
     GetElem(L, 4, &e);
     printf("L中第4个元素取值是 %d\n",e);
     
-    //
+    //2.4 删除L中第3个元素
     ListDelete(&L, 3, &e);
     printf("删除L中第3个元素值 %d\n",e);
     printf("L 删除后\n");
+    PrintfList(L);
+    
+    //2.5 清空链表
+    iStatus = ClearList(&L);
+    printf("清空链表(0:失败,1:成功) %d\n",iStatus);
+    PrintfList(L);
+    
+    //2.6 头插法创建链表
+    CreateListHead(&L, 8);
+    printf("头插法创建链表\n");
+    PrintfList(L);
+
+    iStatus = ClearList(&L);
+    printf("清空链表(0:失败,1:成功) %d\n",iStatus);
+    
+    //2.7 尾插法创建链表
+    CreateListTail(&L, 9);
+    printf("尾插法创建链表\n");
     PrintfList(L);
     
     return 0;
