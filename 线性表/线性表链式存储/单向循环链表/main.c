@@ -3,7 +3,7 @@
 //  单向循环链表
 //
 //  Created by Hao on 2020/4/14.
-//  Copyright © 2020 Hao. All rights reserved.
+//  Copyright © 2020 LYG. All rights reserved.
 //
 
 #include <stdio.h>
@@ -222,6 +222,7 @@ int findValue(LinkList L,ElemType value){
         i++;
     } while (p->data!=value && p->next != L);
     
+    //没找到值
     if (p->next == L && p->data != value) {
         return  -1;
     }
@@ -244,10 +245,27 @@ Status printList(LinkList L) {
             p = p->next;
         }while (p!= L);
         
+        /*
+         第二种遍历方式
+         */
+//        LinkList p = L;
+//        while (p->next != L) {
+//            printf("%5d",p->data);
+//            p = p->next;
+//        }
+//        // 最后尾结点需要单独打印
+//        printf("%5d\n",p->data);
+        
+
+        /*
+        第三种遍历方式
+        */
 //        for (LinkList p = L; p->next!=L; p=p->next) {
 //            printf("%5d\n", p->data);
-        // 最后尾结点需要单独打印
 //        }
+//        // 最后尾结点需要单独打印
+//        printf("%5d\n", p->data);
+
         printf("\n");
     }
     return OK;
