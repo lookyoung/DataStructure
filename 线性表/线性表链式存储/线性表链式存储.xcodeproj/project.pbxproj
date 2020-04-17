@@ -7,12 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F483E6524494412009F3D24 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F483E6424494412009F3D24 /* main.m */; };
 		3F72C8A62446B9C000314552 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F72C8A52446B9C000314552 /* main.c */; };
 		3F72C8CA2446BBC200314552 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F72C8C92446BBC200314552 /* main.c */; };
 		CD7D81E7243AD5BD00580B2E /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = CD7D81E6243AD5BD00580B2E /* main.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		3F483E6024494412009F3D24 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		3F72C8A12446B9C000314552 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -43,6 +53,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3F483E6224494412009F3D24 /* 双向循环链表 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "双向循环链表"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F483E6424494412009F3D24 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3F72C8A32446B9C000314552 /* 单向循环链表 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "单向循环链表"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F72C8A52446B9C000314552 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		3F72C8C12446BBAE00314552 /* 双向链表 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "双向链表"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +64,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3F483E5F24494412009F3D24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3F72C8A02446B9C000314552 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -76,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F483E6324494412009F3D24 /* 双向循环链表 */ = {
+			isa = PBXGroup;
+			children = (
+				3F483E6424494412009F3D24 /* main.m */,
+			);
+			path = "双向循环链表";
+			sourceTree = "<group>";
+		};
 		3F72C8A42446B9C000314552 /* 单向循环链表 */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +125,7 @@
 				3F72C8C82446BBC200314552 /* 双向链表 */,
 				CD7D81E5243AD5BD00580B2E /* 线性表链式存储 */,
 				3F72C8A42446B9C000314552 /* 单向循环链表 */,
+				3F483E6324494412009F3D24 /* 双向循环链表 */,
 				CD7D81E4243AD5BD00580B2E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,6 +136,7 @@
 				CD7D81E3243AD5BD00580B2E /* 线性表链式存储 */,
 				3F72C8A32446B9C000314552 /* 单向循环链表 */,
 				3F72C8C12446BBAE00314552 /* 双向链表 */,
+				3F483E6224494412009F3D24 /* 双向循环链表 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,6 +152,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3F483E6124494412009F3D24 /* 双向循环链表 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F483E6824494412009F3D24 /* Build configuration list for PBXNativeTarget "双向循环链表" */;
+			buildPhases = (
+				3F483E5E24494412009F3D24 /* Sources */,
+				3F483E5F24494412009F3D24 /* Frameworks */,
+				3F483E6024494412009F3D24 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "双向循环链表";
+			productName = "双向循环链表";
+			productReference = 3F483E6224494412009F3D24 /* 双向循环链表 */;
+			productType = "com.apple.product-type.tool";
+		};
 		3F72C8A22446B9C000314552 /* 单向循环链表 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F72C8A72446B9C000314552 /* Build configuration list for PBXNativeTarget "单向循环链表" */;
@@ -183,6 +229,9 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = LYG;
 				TargetAttributes = {
+					3F483E6124494412009F3D24 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					3F72C8A22446B9C000314552 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -210,11 +259,20 @@
 				CD7D81E2243AD5BD00580B2E /* 线性表链式存储 */,
 				3F72C8A22446B9C000314552 /* 单向循环链表 */,
 				3F72C8C02446BBAE00314552 /* 双向链表 */,
+				3F483E6124494412009F3D24 /* 双向循环链表 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3F483E5E24494412009F3D24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F483E6524494412009F3D24 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3F72C89F2446B9C000314552 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -242,6 +300,24 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		3F483E6624494412009F3D24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3F483E6724494412009F3D24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		3F72C8A82446B9C000314552 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -408,6 +484,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3F483E6824494412009F3D24 /* Build configuration list for PBXNativeTarget "双向循环链表" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F483E6624494412009F3D24 /* Debug */,
+				3F483E6724494412009F3D24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3F72C8A72446B9C000314552 /* Build configuration list for PBXNativeTarget "单向循环链表" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
