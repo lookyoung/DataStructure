@@ -26,7 +26,7 @@ typedef struct Node{
     struct Node *next;  //后继指针
 }Node;
 
-typedef Node* LinkList;
+typedef Node * LinkList;
 
 //5.1 创建双向链接
 Status createLinkList(LinkList *L){
